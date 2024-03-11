@@ -1,4 +1,4 @@
-package com.example.esercizio4.model;
+package com.example.esercizio5.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -13,10 +13,13 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "profession")
+@Table(name = "Profession")
 public class Profession {
+
     @Id
+    @Column(name = "id")
     private Integer id;
+    @Column(name = "name")
     private String name;
 
     public Profession(@JsonProperty Integer id,@JsonProperty String name) {

@@ -1,9 +1,9 @@
-package com.example.esercizio4.service;
+package com.example.esercizio5.service;
 
 
-import com.example.esercizio4.dto.ProfessionDtoRequest;
-import com.example.esercizio4.dto.ProfessionDtoResponse;
-import com.example.esercizio4.model.Profession;
+import com.example.esercizio5.dto.ProfessionDtoRequest;
+import com.example.esercizio5.dto.ProfessionDtoResponse;
+import com.example.esercizio5.model.Profession;
 
 import java.util.List;
 

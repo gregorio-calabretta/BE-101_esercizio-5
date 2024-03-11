@@ -1,9 +1,8 @@
-package com.example.esercizio4.controller;
+package com.example.esercizio5.controller;
 
-import com.example.esercizio4.dto.PersonDtoRequest;
-import com.example.esercizio4.dto.PersonDtoResponse;
-import com.example.esercizio4.model.Person;
-import com.example.esercizio4.service.PersonService;
+import com.example.esercizio5.dto.PersonDtoRequest;
+import com.example.esercizio5.dto.PersonDtoResponse;
+import com.example.esercizio5.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,10 +21,17 @@ public class PersonController {
     }
 
     @PostMapping
-    public ResponseEntity<PersonDtoResponse> createPerson(@RequestBody PersonDtoRequest person){
+    public ResponseEntity<PersonDtoResponse> createPerson(@RequestBody PersonDtoRequest person) throws Exception {
         PersonDtoResponse responseDTO  = personService.createPerson(person);
         return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
     }
+
+    @GetMapping("/")
+    public ResponseEntity<List<String>> getNamesByChar(@RequestParam String startingLetter){
+       List<String> nameList = personService.findByNameStartingWith(startingLetter);
+        return ResponseEntity.status(HttpStatus.OK).body(nameList);
+    }
+
 
     @GetMapping
     public ResponseEntity<List<PersonDtoResponse>> getAllPeople(){
@@ -44,4 +50,9 @@ public class PersonController {
         personService.deletePerson(id);
     }
 
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleException(Exception e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    }
 }

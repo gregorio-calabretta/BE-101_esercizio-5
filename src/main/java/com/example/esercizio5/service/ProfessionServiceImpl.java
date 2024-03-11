@@ -1,12 +1,12 @@
-package com.example.esercizio4.service;
+package com.example.esercizio5.service;
 
-import com.example.esercizio4.dto.ProfessionDtoRequest;
-import com.example.esercizio4.dto.ProfessionDtoResponse;
-import com.example.esercizio4.mapper.ProfessionMapper;
-import com.example.esercizio4.model.Person;
-import com.example.esercizio4.model.Profession;
-import com.example.esercizio4.repository.PersonRepository;
-import com.example.esercizio4.repository.ProfessionRepository;
+import com.example.esercizio5.dto.ProfessionDtoRequest;
+import com.example.esercizio5.dto.ProfessionDtoResponse;
+import com.example.esercizio5.mapper.ProfessionMapper;
+import com.example.esercizio5.model.Person;
+import com.example.esercizio5.model.Profession;
+import com.example.esercizio5.repository.PersonRepository;
+import com.example.esercizio5.repository.ProfessionRepository;
 import org.hibernate.boot.model.naming.IllegalIdentifierException;
 import org.springframework.stereotype.Service;
 

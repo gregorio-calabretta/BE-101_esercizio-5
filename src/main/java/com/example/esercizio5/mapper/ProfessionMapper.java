@@ -1,7 +1,7 @@
-package com.example.esercizio4.mapper;
+package com.example.esercizio5.mapper;
 
-import com.example.esercizio4.dto.ProfessionDtoResponse;
-import com.example.esercizio4.model.Profession;
+import com.example.esercizio5.dto.ProfessionDtoResponse;
+import com.example.esercizio5.model.Profession;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;

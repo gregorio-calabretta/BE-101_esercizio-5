@@ -1,8 +1,8 @@
-package com.example.esercizio4.repository;
+package com.example.esercizio5.repository;
 
-import com.example.esercizio4.dto.ProfessionDtoRequest;
-import com.example.esercizio4.dto.ProfessionDtoResponse;
-import com.example.esercizio4.model.Profession;
+import com.example.esercizio5.dto.ProfessionDtoRequest;
+import com.example.esercizio5.dto.ProfessionDtoResponse;
+import com.example.esercizio5.model.Profession;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

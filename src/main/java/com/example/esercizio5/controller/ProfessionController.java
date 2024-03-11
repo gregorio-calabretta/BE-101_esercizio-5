@@ -1,9 +1,9 @@
-package com.example.esercizio4.controller;
+package com.example.esercizio5.controller;
 
-import com.example.esercizio4.dto.ProfessionDtoRequest;
-import com.example.esercizio4.dto.ProfessionDtoResponse;
-import com.example.esercizio4.model.Profession;
-import com.example.esercizio4.service.ProfessionService;
+import com.example.esercizio5.dto.ProfessionDtoRequest;
+import com.example.esercizio5.dto.ProfessionDtoResponse;
+import com.example.esercizio5.model.Profession;
+import com.example.esercizio5.service.ProfessionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

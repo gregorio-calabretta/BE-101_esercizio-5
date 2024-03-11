@@ -1,8 +1,8 @@
-package com.example.esercizio4.mapper;
+package com.example.esercizio5.mapper;
 
-import com.example.esercizio4.dto.PersonDtoResponse;
+import com.example.esercizio5.dto.PersonDtoResponse;
 import org.springframework.stereotype.Component;
-import com.example.esercizio4.model.Person;
+import com.example.esercizio5.model.Person;
 
 import java.util.LinkedList;
 import java.util.List;

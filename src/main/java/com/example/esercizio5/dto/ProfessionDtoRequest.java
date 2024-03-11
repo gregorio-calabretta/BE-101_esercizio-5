@@ -1,4 +1,4 @@
-package com.example.esercizio4.dto;
+package com.example.esercizio5.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

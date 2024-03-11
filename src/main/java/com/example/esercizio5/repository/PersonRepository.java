@@ -1,7 +1,10 @@
-package com.example.esercizio4.repository;
+package com.example.esercizio5.repository;
 
-import com.example.esercizio4.model.Person;
+import com.example.esercizio5.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,4 +18,6 @@ public interface PersonRepository extends JpaRepository<Person,UUID> {
     void deleteById(UUID id);
     Optional<Person> findById(UUID id);
     Person findByNameAndSurname(String name, String surname);
+    @Query(value = "SELECT name FROM Person WHERE name LIKE CONCAT(:startingLetter,'%') ",nativeQuery = true)
+    List<String> findByNameStartingWith(@Param("startingLetter") String startingLetter);
 }

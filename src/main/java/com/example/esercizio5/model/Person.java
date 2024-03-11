@@ -1,4 +1,4 @@
-package com.example.esercizio4.model;
+package com.example.esercizio5.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,13 +12,17 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "person")
+@Table(name = "Person")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "surname")
     private String surname;
+
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.DETACH)
     private Profession profession;
 
